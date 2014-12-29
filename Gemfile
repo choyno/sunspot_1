@@ -6,11 +6,14 @@ gem 'rails', '3.2.16'
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
 gem 'mysql2'
+
+
+#credits to this tutorial http://collectiveidea.com/blog/archives/2011/03/08/full-text-searching-with-solr-and-sunspot/
 gem 'sunspot_rails'   # Sunspot is a Ruby library for expressive, powerful interaction with the Solr search engine. Sunspot is built on top of the RSolr library, which provides a low-level interface for Solr interaction; Sunspot provides a simple, intuitive, expressive DSL backed by powerful features for indexing objects and searching for them.
 gem 'sunspot_solr'    # Sunspot is built on top of the RSolr library, which provides a low-level interface for Solr interaction; Sunspot provides a simple, intuitive, expressive DSL backed by powerful features for indexing objects and searching for them.
 gem 'progress_bar'
 
-gem 'pry'
+gem 'pry' #debugging
 
 # Gems used only for assets and not required
 # in production environments by default.
