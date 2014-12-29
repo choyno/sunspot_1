@@ -10,6 +10,19 @@ class BooksController < ApplicationController
     end
   end
 
+  def search
+    @books = Book.search do
+      keywords params[:query]
+    end.results
+
+    respond_to do |format|
+      format.html { render :action => "index" }
+      format.xml { render :xml => @books }
+    end
+
+  end
+
+
   # GET /books/1
   # GET /books/1.json
   def show
