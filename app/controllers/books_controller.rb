@@ -2,26 +2,13 @@ class BooksController < ApplicationController
   # GET /books
   # GET /books.json
   def index
-    @books = Book.all
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @books }
-    end
-  end
-
-  def search
-    @books = Book.search do
+    @search = Book.search do
       keywords params[:query]
-    end.results
-
-    respond_to do |format|
-      format.html { render :action => "index" }
-      format.xml { render :xml => @books }
     end
 
-  end
+    @books = @search.results
 
+  end
 
   # GET /books/1
   # GET /books/1.json
